@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Map Editor</title>
+  <script type="text/javascript" src="d3/d3.min.js"></script>
+  <style>
+    svg {
+      background-color: rgb(206, 206, 206);
+    }
+
+    .grid line {
+      stroke: rgb(112, 112, 112);
+      stroke-opacity: 0.7;
+      shape-rendering: crispEdges;
+      pointer-events: none;
+    }
+
+    .grid path {
+      stroke-width: 0;
+    }
+
+    .link {
+      pointer-events: none;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="canvas"></div>
+  <div style="width: 100%; display: table;">
+    <div style="display: table-row">
+      <div style="width: 25%; display: table-cell;">
+        [1] - Node <br>
+        [2] - Town <br>
+        [3] - Encounter <br>
+        [4] - Link <br>
+        [5] - Unlink <br>
+        [6] - Delete <br>
+      </div>
+      <div style="display: table-cell;"> Current Mode: <div id="mode">Add Node </div>
+      </div>
+      <div style="display: table-cell;">
+        <label for="nodesCsv">Node CSV File: </label>
+        <input type="file" id="nodesCsv" /><br>
+        <label for="edgesCsv">Edges CSV File: </label>
+        <input type="file" id="edgesCsv" /><br>
+        <button onclick="loadCsv()">Load</button>
+        <button onclick="writeCsv()">Save</button>
+
+      </div>
+
+
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="scripts/script.js" type="text/javascript"></script>
+  <script src="scripts/jquery.csv.min.js"></script>
+
+
+</body>
+
+</html>

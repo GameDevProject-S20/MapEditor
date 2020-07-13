@@ -1,0 +1,6 @@
+Id,Name,Type,PosX,PosY
+0,Town1,TOWN,0,0
+1,Node1,NONE,2,2
+2,Event1,EVENT,3,0
+3,Node2,NONE,2,-4
+4,Town2,TOWN,-1,-2
